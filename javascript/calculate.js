@@ -38,7 +38,7 @@ let symbol = document.querySelectorAll('.symbol')
             }
         }
         
-        if( (repayment_check || intrest_check ) && p && t && r){
+        if( (repayment_check || intrest_check) && p && t && r){
             let mp = (p * (r / n)) / (1 - Math.pow(1 + (r / n), -n * t) )
             
             defaultResult.style.display = 'none'
