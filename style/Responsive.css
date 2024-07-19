@@ -1,0 +1,54 @@
+
+@media screen and (max-width: 576px) {
+
+    body{
+        justify-content: start;
+        height: auto;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .calculator{
+        width: 100%;
+    }
+
+    .termRate{
+        flex-direction: column;
+    }
+
+    .mortgageAmount div input + span{
+        top: 0.5px;
+    }
+    
+    .termRate div:nth-child(1){
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .termRate div:nth-child(1) span{
+        top: 1px;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) and (min-width: 576px) {
+
+    .calculator{
+        width: 500px;
+    }
+
+    .result{
+        width: 500px;
+    }
+
+    .termRate{
+        justify-content: space-between;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+}

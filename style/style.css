@@ -1,0 +1,305 @@
+@font-face {
+    font-family: jakarta;
+    src: url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: jakarta_italic;
+    src: url(../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: jakarta;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(202, 86%, 94%);
+}
+
+.container{
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.calculator{
+    width: 375px;
+    padding: 20px;
+}
+
+.result{
+    width: 375px;
+    background-color: hsl(202, 55%, 16%);
+    border-radius: 0 0 0 50px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h2{
+    font-size: 20px;
+}
+
+.header a{
+   color: rgb(85, 85, 85);
+   text-decoration: none;
+   border-bottom: 1px solid gray;
+}
+
+.mortgageAmount{
+    margin-bottom: 20px;
+}
+
+.mortgageAmount label{
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+.mortgageAmount div{
+    position: relative;
+}
+
+.mortgageAmount div input{
+    width: 100%;
+    padding: 6px 6px 6px 54px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+.mortgageAmount div input + span{
+    position: absolute;
+    left: 0.5px;
+    top: 1px;
+    height: 95%;
+    background-color: hsl(202, 86%, 94%);
+    padding: 7px 13px;
+    border-radius: 4px 0 0 4px;
+    font-weight: 700;
+    color: rgb(86, 116, 156);
+}
+
+.mortgageAmount div input:required:focus{
+    border-color: red;
+}
+
+.mortgageAmount div input:focus{
+    outline: none;
+    border-color: hsl(61, 70%, 52%);
+}
+
+.mortgageAmount div input:focus + span{
+    background-color: hsl(61, 70%, 52%);
+}
+
+.termRate{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.termRate div:nth-child(1){
+    margin-right: 10px;
+}
+
+.termRate label{
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+.termRate input{
+    width: 100%;
+    font-size: 18px;
+    padding: 6px 6px 6px 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+.termRate .termRate_child{
+    position: relative;
+}
+
+.termRate .termRate_child input + span{
+    position: absolute;
+    right: 1px;
+    top: .5px;
+    height: 95%;
+    background-color: hsl(202, 86%, 94%);
+    padding: 7px 13px;
+    border-radius: 0 4px 4px 0;
+    font-weight: 700;
+    color: rgb(86, 116, 156);
+}
+
+.termRate .termRate_child input:focus{
+    outline: none;
+    border-color: hsl(61, 70%, 52%);
+}
+
+.termRate .termRate_child input:focus + span{
+    background-color: #d7da2f;
+}
+
+.mortgageType{
+    margin-bottom: 20px;
+}
+
+.mortgageType p{
+    margin-bottom: 10px;
+}
+
+.mortgageType div{
+    position: relative;
+    width: 100%;
+    height: 47px;
+}
+
+.mortgageType div label{
+   border: 1px solid rgb(179, 179, 179);
+   display: block;
+   padding: 8px 8px 8px 45px;
+   cursor: pointer;
+   border-radius: 5px;
+   font-weight: 600;
+}
+
+.mortgageType div label:hover{
+    border-color: #759600;
+}
+
+.mortgageType div input{
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    accent-color: #889b43;
+}
+
+.mortgageType div input:checked + label{
+    background-color: #e5f3b3;
+    border-color: #889b43;
+    font-weight: bold;
+}
+
+.calculate{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.calculate button{
+    padding: 13px 30px 13px 60px;
+    border-radius: 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(61, 70%, 52%);
+    transition: background-color .2s;
+}
+
+.calculate button:hover{
+    background-color: #fcff3b
+}
+
+.calculate button + img{
+    position: absolute;
+    left: 25px;
+    top: 14px;
+}
+
+input:focus + span{
+    background-color: hsl(61, 70%, 52%);
+}
+
+
+.result .defaul_result{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result .defaul_result h3{
+    color: white;
+}
+
+.result .defaul_result p{
+    color: rgb(218, 218, 218);
+    padding: 20px 30px;
+    font-size: 12px;
+}
+
+.final_result{
+    padding: 30px;
+}
+
+.final_result h3{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.final_result p{
+    font-size: 12px;
+    color: rgb(218, 218, 218);
+}
+
+.final_result div{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: hsl(201, 53%, 12%);
+    border-top: 3px solid #d7da2f;
+    border-radius: 5px;
+}
+
+.final_result div h1{
+    margin: 5px 0 15px;
+    color: #d7da2f;
+    font-size: 40px;
+}
+
+.final_result div hr{
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.final_result div span{
+    color: white;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+
+
+.display_none{
+    display: none;
+}
+.span_required_style{
+    color: red;
+    position: relative;
+    top: 5px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 10px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
